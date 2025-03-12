@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +17,14 @@
         <p>Date: [Insert Date]</p>
         <p>Time: [Insert Time]</p>
         <p>Location: [Insert Location]</p>
-        <button>RSVP</button>
+        <button id="rsvp-button">RSVP</button>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
 ```
 
-CSS:
+CSS (in style.css file):
 ```
 body {
     font-family: Arial, sans-serif;
@@ -32,10 +35,6 @@ body {
     width: 80%;
     margin: 40px auto;
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -60,3 +59,10 @@ button {
 button:hover {
     background-color: #3e8e41;
 }
+```
+
+JavaScript (in script.js file):
+```
+document.getElementById("rsvp-button").addEventListener("click", function() {
+    alert("Thank you for RSVPing! We look forward to seeing you at the wedding.");
+});
